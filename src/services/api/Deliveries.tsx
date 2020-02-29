@@ -19,7 +19,7 @@ const deliveries : Array<Delivery> = [
         address: 'Address 3',
         latitutde: 5.4546458,
         longitude: 8.2498874,
-        customerName: 'Amalia Moiner'},
+        customerName: 'Amalia Moliner'},
     {
         id: 1334,
         address: 'Address 4',

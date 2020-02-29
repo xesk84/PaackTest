@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import {DeliveriesList, DeliveryDetail} from './screens';
+import {DeliveriesList, DeliveryDetail, DeliveryDetailScreen} from './screens';
 import {createStackNavigator} from '@react-navigation/stack';
 // import { useUserContext } from './providers/UserProvider';
 // import { User } from './entities/User';
@@ -35,7 +35,7 @@ export function RootNavigation () {
         <NavigationContainer>
         <Stack.Navigator initialRouteName="List">
             <Stack.Screen name="List" component={DeliveriesList} />
-            <Stack.Screen name="Detail" component={DeliveryDetail} />
+            <Stack.Screen name="Detail" component={DeliveryDetailScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     );

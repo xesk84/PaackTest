@@ -4,10 +4,8 @@ import { getDeliveries } from '../services';
 import { Delivery } from '../entities';
 import { ListItem } from '../components';
 
-
-
-export function DeliveriesList () {
-
+//TODO: tipar navigation
+export function DeliveriesList ({navigation}) {
   const [deliveries, setDeliveries] = useState([])
 
   useEffect(() => {
@@ -23,7 +21,7 @@ export function DeliveriesList () {
 
   const renderItem = (listItem: ListRenderItemInfo<Delivery>): JSX.Element => {
     const {item} = listItem;
-  return (<ListItem item={item} />);
+  return (<ListItem item={item} navigation={navigation} />);
   };
 
     return (

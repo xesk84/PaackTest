@@ -1,7 +1,7 @@
 import {DeliveriesList} from './DeliveriesList';
-import {DeliveryDetail} from './DeliveryDetail';
+import {DeliveryDetailScreen} from './DeliveryDetailScreen';
 
 export {
     DeliveriesList,
-    DeliveryDetail
+    DeliveryDetailScreen
 }
