@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, SafeAreaView, FlatList, ListRenderItemInfo } from 'react-native';
+import { SafeAreaView, FlatList, ListRenderItemInfo, StyleSheet } from 'react-native';
 import { getDeliveries } from '../services';
 import { Delivery } from '../entities';
+import { ListItem } from '../components';
 
 
 
@@ -12,7 +13,6 @@ export function DeliveriesList () {
   useEffect(() => {
     const auxDeliveries = getDeliveries();
     if (!!auxDeliveries && auxDeliveries.length > 0){
-      console.log('tinc deliveries', auxDeliveries)
       setDeliveries(auxDeliveries);
     }
   });
@@ -23,12 +23,11 @@ export function DeliveriesList () {
 
   const renderItem = (listItem: ListRenderItemInfo<Delivery>): JSX.Element => {
     const {item} = listItem;
-    console.log('item', listItem);
-  return (<View><Text>{item.customerName}</Text></View>);
+  return (<ListItem item={item} />);
   };
 
     return (
-      <SafeAreaView>
+      <SafeAreaView style={styles.container}>
          <FlatList 
           data={deliveries}
           keyExtractor={keyExtractor}
@@ -36,3 +35,12 @@ export function DeliveriesList () {
       </SafeAreaView>
     );
 }
+
+
+const styles = StyleSheet.create({
+  container:{
+    padding: 20,
+    backgroundColor: 'white',
+    flex: 1
+  }
+})
