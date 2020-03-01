@@ -7,34 +7,34 @@ import { useSelectedDeliveryContext } from './providers/SelectedDelivery';
 
 
 export function RootNavigation () {
-    const [selectedDelivery, setSelectedDelivery] = useSelectedDeliveryContext();
+    //const [selectedDelivery, setSelectedDelivery] = useSelectedDeliveryContext();
 
-    const backgroundJob = {
-        jobKey: 'myJob',
-        job: (selectedDelivery) => { 
-          saveGPSData(selectedDelivery); 
-         }
-       };
+    // const backgroundJob = {
+    //     jobKey: 'myJob',
+    //     job: (selectedDelivery) => { 
+    //       saveGPSData(selectedDelivery); 
+    //      }
+    //    };
       
-      BackgroundJob.register(backgroundJob);
+    //   BackgroundJob.register(backgroundJob);
       
-      var backgroundSchedule = {
-       jobKey: 'myJob',
-       period: 1000,
-       allowWhileIdle: true,
-       exact: true,
-       allowExecutionInForeground: true,
-      }
+    //   var backgroundSchedule = {
+    //    jobKey: 'myJob',
+    //    period: 1000,
+    //    allowWhileIdle: true,
+    //    exact: true,
+    //    allowExecutionInForeground: true,
+    //   }
       
-      BackgroundJob.schedule(backgroundSchedule);
+    //   BackgroundJob.schedule(backgroundSchedule);
      
-      BackgroundJob.isAppIgnoringBatteryOptimization((error,ignoringOptimization) => { 
-        console.log(error+' <<Android>>ignore>> '+ignoringOptimization) 
-       });
+    //   BackgroundJob.isAppIgnoringBatteryOptimization((error,ignoringOptimization) => { 
+    //     console.log(error+' <<Android>>ignore>> '+ignoringOptimization) 
+    //    });
      
-     const saveGPSData = (selectedDelivery) => {
-      console.log('Selected Delivery:' + selectedDelivery);
-     }
+    //  const saveGPSData = (selectedDelivery) => {
+    //   console.log('Selected Delivery:' + selectedDelivery);
+    //  }
 
     const Stack = createStackNavigator();
     return (
