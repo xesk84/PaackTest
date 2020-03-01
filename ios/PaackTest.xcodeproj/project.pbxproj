@@ -19,6 +19,7 @@
 		4BDEE6D45E3C4B145A0E6C96 /* libPods-PaackTestTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8D91D1B5926447F3661B87 /* libPods-PaackTestTests.a */; };
 		6003D3CAE678BFF09C8921B1 /* libPods-PaackTest-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 700FB4DE845388FD3394C654 /* libPods-PaackTest-tvOSTests.a */; };
 		6A80028A14A27C67A67F6141 /* libPods-PaackTest-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D13E34FE8F4271477CB0398 /* libPods-PaackTest-tvOS.a */; };
+		836AFA8D3B5647D68CFEA99B /* libRNBackgroundJob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC9E3E2C18F49A68D7BF841 /* libRNBackgroundJob.a */; };
 		D2710019240A777B00F1E579 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = D2710018240A777B00F1E579 /* Fonts */; };
 		D5CB872B72F2E4AC9478A05E /* libPods-PaackTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2FCFE64126B13FBF656C86B /* libPods-PaackTest.a */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,13 @@
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
 			remoteInfo = "PaackTest-tvOS";
 		};
+		D2710024240BC34F00F1E579 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D96C6053741D4B0A9597ADA4 /* RNBackgroundJob.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNBackgroundJob;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -56,12 +64,14 @@
 		1F029C3F58A55D6BA04997EC /* Pods-PaackTest-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaackTest-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-PaackTest-tvOS/Pods-PaackTest-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* PaackTest-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PaackTest-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* PaackTest-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PaackTest-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CC9E3E2C18F49A68D7BF841 /* libRNBackgroundJob.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNBackgroundJob.a; sourceTree = "<group>"; };
 		700FB4DE845388FD3394C654 /* libPods-PaackTest-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PaackTest-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F81703FE9750791E62D00B /* Pods-PaackTest-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaackTest-tvOS.release.xcconfig"; path = "Target Support Files/Pods-PaackTest-tvOS/Pods-PaackTest-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		7C8D91D1B5926447F3661B87 /* libPods-PaackTestTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PaackTestTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D13E34FE8F4271477CB0398 /* libPods-PaackTest-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PaackTest-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		842DC52296CE4ECFAE84BF79 /* Pods-PaackTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaackTestTests.debug.xcconfig"; path = "Target Support Files/Pods-PaackTestTests/Pods-PaackTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D2710018240A777B00F1E579 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = "../node_modules/react-native-vector-icons/Fonts"; sourceTree = "<group>"; };
+		D96C6053741D4B0A9597ADA4 /* RNBackgroundJob.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNBackgroundJob.xcodeproj; path = "../node_modules/react-native-background-job/ios/RNBackgroundJob.xcodeproj"; sourceTree = "<group>"; };
 		E23611993757B97CB82B985E /* Pods-PaackTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaackTest.release.xcconfig"; path = "Target Support Files/Pods-PaackTest/Pods-PaackTest.release.xcconfig"; sourceTree = "<group>"; };
 		E3CB97C53D262C4D219D0718 /* Pods-PaackTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaackTest.debug.xcconfig"; path = "Target Support Files/Pods-PaackTest/Pods-PaackTest.debug.xcconfig"; sourceTree = "<group>"; };
 		E6D0471BCFA23DC1EFB469C9 /* Pods-PaackTest-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaackTest-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-PaackTest-tvOSTests/Pods-PaackTest-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -85,6 +95,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5CB872B72F2E4AC9478A05E /* libPods-PaackTest.a in Frameworks */,
+				836AFA8D3B5647D68CFEA99B /* libRNBackgroundJob.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +166,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				D96C6053741D4B0A9597ADA4 /* RNBackgroundJob.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -169,6 +181,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				8B6CBB11D61555A64290C0A0 /* Pods */,
 				BC0800B2AD48474A99EF44C0 /* Resources */,
+				D2710020240BC34E00F1E579 /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -206,6 +219,22 @@
 			children = (
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		D2710020240BC34E00F1E579 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				5CC9E3E2C18F49A68D7BF841 /* libRNBackgroundJob.a */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		D2710021240BC34F00F1E579 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2710025240BC34F00F1E579 /* libRNBackgroundJob.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,6 +355,12 @@
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D2710021240BC34F00F1E579 /* Products */;
+					ProjectRef = D96C6053741D4B0A9597ADA4 /* RNBackgroundJob.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* PaackTest */,
@@ -335,6 +370,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D2710025240BC34F00F1E579 /* libRNBackgroundJob.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNBackgroundJob.a;
+			remoteRef = D2710024240BC34F00F1E579 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		00E356EC1AD99517003FC87E /* Resources */ = {
@@ -648,9 +693,17 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-background-job/ios",
+				);
 				INFOPLIST_FILE = PaackTestTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -668,9 +721,17 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-background-job/ios",
+				);
 				INFOPLIST_FILE = PaackTestTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -689,6 +750,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-background-job/ios",
+				);
 				INFOPLIST_FILE = PaackTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -708,6 +773,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-background-job/ios",
+				);
 				INFOPLIST_FILE = PaackTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -734,8 +803,16 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-background-job/ios",
+				);
 				INFOPLIST_FILE = "PaackTest-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -762,8 +839,16 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-background-job/ios",
+				);
 				INFOPLIST_FILE = "PaackTest-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -789,8 +874,16 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-background-job/ios",
+				);
 				INFOPLIST_FILE = "PaackTest-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -816,8 +909,16 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-background-job/ios",
+				);
 				INFOPLIST_FILE = "PaackTest-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
