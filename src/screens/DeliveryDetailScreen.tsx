@@ -5,6 +5,10 @@ import {getDelivery} from '../services/api/Delivery';
 import {DetailTextRow, DetailCheckRow, Button} from '../components';
 import {useSelectedDeliveryContext} from '../providers/SelectedDelivery';
 import BackgroundJob from 'react-native-background-job';
+import { collectData } from '../services';
+import {  } from '../services';
+import { useDriverContext } from '../providers/DriverProvider';
+
 
 interface DeliveryDetailProps {
   navigation;
@@ -25,6 +29,7 @@ export function DeliveryDetailScreen(props: DeliveryDetailProps) {
   });
 
   const [selectedDelivery, setSelectedDelivery] = useSelectedDeliveryContext();
+  const [driver] = useDriverContext();
 
   useEffect(() => {
     if (id > 0) {
@@ -47,7 +52,7 @@ export function DeliveryDetailScreen(props: DeliveryDetailProps) {
     const backgroundJob = {
       jobKey: 'myJob'+detailDelivery.id,
       job: () => { 
-        saveGPSData(); 
+        collectData(detailDelivery.id, driver); 
        }
      };
     
@@ -62,10 +67,6 @@ export function DeliveryDetailScreen(props: DeliveryDetailProps) {
     }
     
     BackgroundJob.schedule(backgroundSchedule);
-   
-   const saveGPSData = () => {
-    console.log('Selected Delivery:' + detailDelivery.id);
-   }
 
     navigation.goBack();
   };

@@ -1,12 +1,14 @@
 import React from 'react';
-import { RootNavigation } from './src/RootNavigator';
-import { SelectedDeliveryProvider } from './src/providers/SelectedDelivery';
-
+import {RootNavigation} from './src/RootNavigator';
+import {SelectedDeliveryProvider} from './src/providers/SelectedDelivery';
+import {DriverProvider} from './src/providers/DriverProvider';
 
 const App = () => {
   return (
     <SelectedDeliveryProvider>
-      <RootNavigation />
+      <DriverProvider>
+        <RootNavigation />
+      </DriverProvider>
     </SelectedDeliveryProvider>
   );
 };

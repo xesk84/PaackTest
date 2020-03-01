@@ -2,6 +2,6 @@ import { Driver } from "./Driver";
 import { TrackingData } from "./TrackingData";
 
 export interface Tracking {
-    driver: Driver,
+    driverId: number,
     trackingDatas : Array<TrackingData>
 }
