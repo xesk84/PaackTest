@@ -3,6 +3,7 @@ import {View, StyleSheet} from 'react-native';
 import {Delivery} from '../entities';
 import {TitleListItem, TextListItem, Touchable} from '.';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { useSelectedDeliveryContext } from '../providers/SelectedDelivery';
 
 export interface ListItemProps {
   item: Delivery;
@@ -11,6 +12,7 @@ export interface ListItemProps {
 
 export function ListItem(props: ListItemProps) {
   const {item} = props;
+  const [selectedDelivery] = useSelectedDeliveryContext();
 
   const navigateToDetail = (): void => {
     const {navigation} = props;
@@ -25,7 +27,9 @@ export function ListItem(props: ListItemProps) {
           <TextListItem text={item.address} />
         </View>
         <View style={styles.selectedItemContainer}>
-          <Icon name="star-o" size={30} color="black" />
+            { selectedDelivery === item.id &&
+                <Icon name="star-o" size={30} color="black" />
+            }
         </View>
         <View style={styles.goToDetailContainer}>
           <Icon name="chevron-right" size={30} color="black" />

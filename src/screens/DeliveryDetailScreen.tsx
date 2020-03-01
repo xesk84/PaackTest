@@ -1,53 +1,89 @@
-import React, { useEffect, useState } from 'react';
-import { Text, SafeAreaView, StyleSheet, View } from 'react-native';
-import { DeliveryDetail } from '../entities';
-import { getDelivery } from '../services/api/Delivery';
-import { DetailTextRow, DetailCheckRow } from '../components';
+import React, {useEffect, useState} from 'react';
+import {Text, SafeAreaView, StyleSheet, View} from 'react-native';
+import {DeliveryDetail} from '../entities';
+import {getDelivery} from '../services/api/Delivery';
+import {DetailTextRow, DetailCheckRow, Button} from '../components';
+import {useSelectedDeliveryContext} from '../providers/SelectedDelivery';
 
 interface DeliveryDetailProps {
-  navigation,
-  route
+  navigation;
+  route;
 }
 
-export function DeliveryDetailScreen (props: DeliveryDetailProps) {
+export function DeliveryDetailScreen(props: DeliveryDetailProps) {
   const {id} = props.route.params;
+  const {navigation} = props;
   const [detailDelivery, setDetailDelivery] = useState<DeliveryDetail>({
     id: 0,
     address: '',
     latitutde: 0,
-    longitude:0,
+    longitude: 0,
     customerName: '',
     requiresSignature: false,
-    specialInstructions: ''
-  })
+    specialInstructions: '',
+  });
+
+  const [selectedDelivery, setSelectedDelivery] = useSelectedDeliveryContext();
 
   useEffect(() => {
-    if(id > 0){
+    if (id > 0) {
       const delivery: DeliveryDetail = getDelivery(id);
-      if(!!delivery){
+      if (!!delivery) {
         setDetailDelivery(delivery);
-      } 
+      }
     }
-  })
+  });
 
-    return (
-      <SafeAreaView style={styles.container}>
-        <View style={styles.dataContainer}>
-           <DetailTextRow fieldName='Id:' fieldValue={detailDelivery.id.toString()} />
-           <DetailTextRow fieldName='Customer name:' fieldValue={detailDelivery.customerName} />
-           <DetailTextRow fieldName='Address:' fieldValue={detailDelivery.address} />
-           <DetailTextRow fieldName='Latitude:' fieldValue={detailDelivery.latitutde.toString()} />
-           <DetailTextRow fieldName='Longitude:' fieldValue={detailDelivery.longitude.toString()} />
-           <DetailCheckRow fieldName='Requires signature:' fieldValue={detailDelivery.requiresSignature} />
-           <DetailTextRow fieldName='Special instructions:' fieldValue={detailDelivery.specialInstructions} />
+  const setActive = (): void => {
+    const {navigation} = props;
+    setSelectedDelivery(detailDelivery.id);
+    navigation.goBack();
+  };
+
+  return (
+    <SafeAreaView style={styles.container}>
+      <View style={styles.dataContainer}>
+        <DetailTextRow
+          fieldName="Id:"
+          fieldValue={detailDelivery.id.toString()}
+        />
+        <DetailTextRow
+          fieldName="Customer name:"
+          fieldValue={detailDelivery.customerName}
+        />
+        <DetailTextRow
+          fieldName="Address:"
+          fieldValue={detailDelivery.address}
+        />
+        <DetailTextRow
+          fieldName="Latitude:"
+          fieldValue={detailDelivery.latitutde.toString()}
+        />
+        <DetailTextRow
+          fieldName="Longitude:"
+          fieldValue={detailDelivery.longitude.toString()}
+        />
+        <DetailCheckRow
+          fieldName="Requires signature:"
+          fieldValue={detailDelivery.requiresSignature}
+        />
+        <DetailTextRow
+          fieldName="Special instructions:"
+          fieldValue={detailDelivery.specialInstructions}
+        />
+      </View>
+      {detailDelivery.id === selectedDelivery ? (
+        <View style={styles.buttonContainer}>
+          <Text style={styles.currentActiveText}>Current Active</Text>
         </View>
-        <View>
-          
+      ) : (
+        <View style={styles.buttonContainer}>
+          <Button onPress={setActive} />
         </View>
-      </SafeAreaView>
-    );
+      )}
+    </SafeAreaView>
+  );
 }
-
 
 const styles = StyleSheet.create({
   container: {
@@ -56,9 +92,18 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   dataContainer: {
-    borderWidth:0.5,
+    borderWidth: 0.5,
     borderColor: 'black',
-    padding: 20
-
+    padding: 20,
+  },
+  buttonContainer: {
+    paddingTop: 40,
+    justifyContent: 'center',
+    alignContent: 'center',
+    alignSelf: 'center',
+  },
+  currentActiveText: {
+    fontSize: 25,
+    color: 'black'
   }
-})
+});

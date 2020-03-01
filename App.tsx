@@ -1,10 +1,13 @@
 import React from 'react';
 import { RootNavigation } from './src/RootNavigator';
+import { SelectedDeliveryProvider } from './src/providers/SelectedDelivery';
 
 
 const App = () => {
   return (
-    <RootNavigation />
+    <SelectedDeliveryProvider>
+      <RootNavigation />
+    </SelectedDeliveryProvider>
   );
 };
 
