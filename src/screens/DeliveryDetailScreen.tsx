@@ -4,6 +4,7 @@ import {DeliveryDetail} from '../entities';
 import {getDelivery} from '../services/api/Delivery';
 import {DetailTextRow, DetailCheckRow, Button} from '../components';
 import {useSelectedDeliveryContext} from '../providers/SelectedDelivery';
+import BackgroundJob from 'react-native-background-job';
 
 interface DeliveryDetailProps {
   navigation;
@@ -37,6 +38,35 @@ export function DeliveryDetailScreen(props: DeliveryDetailProps) {
   const setActive = (): void => {
     const {navigation} = props;
     setSelectedDelivery(detailDelivery.id);
+
+    BackgroundJob.cancelAll()
+      .then(() => console.log('Success'))
+      .catch(err => console.error(err));
+
+
+    const backgroundJob = {
+      jobKey: 'myJob'+detailDelivery.id,
+      job: () => { 
+        saveGPSData(); 
+       }
+     };
+    
+    BackgroundJob.register(backgroundJob);
+    
+    var backgroundSchedule = {
+     jobKey: 'myJob'+detailDelivery.id,
+     period: 1000,
+     allowWhileIdle: true,
+     exact: true,
+     allowExecutionInForeground: true,
+    }
+    
+    BackgroundJob.schedule(backgroundSchedule);
+   
+   const saveGPSData = () => {
+    console.log('Selected Delivery:' + detailDelivery.id);
+   }
+
     navigation.goBack();
   };
 
