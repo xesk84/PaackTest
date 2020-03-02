@@ -1,6 +1,6 @@
 import React from 'react';
 import {RootNavigation} from './src/RootNavigator';
-import {SelectedDeliveryProvider} from './src/providers/SelectedDelivery';
+import {SelectedDeliveryProvider} from './src/providers/SelectedDeliveryProvider';
 import {DriverProvider} from './src/providers/DriverProvider';
 
 const App = () => {
