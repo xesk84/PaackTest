@@ -3,7 +3,7 @@ import {View, StyleSheet} from 'react-native';
 import {Delivery} from '../entities';
 import {TitleListItem, TextListItem, Touchable} from '.';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { useSelectedDeliveryContext } from '../providers/SelectedDelivery';
+import { useSelectedDeliveryContext } from '../providers/SelectedDeliveryProvider';
 
 export interface ListItemProps {
   item: Delivery;

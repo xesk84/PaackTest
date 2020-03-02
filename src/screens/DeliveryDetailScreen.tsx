@@ -3,7 +3,7 @@ import {Text, SafeAreaView, StyleSheet, View} from 'react-native';
 import {DeliveryDetail} from '../entities';
 import {getDelivery} from '../services/api/Delivery';
 import {DetailTextRow, DetailCheckRow, Button} from '../components';
-import {useSelectedDeliveryContext} from '../providers/SelectedDelivery';
+import {useSelectedDeliveryContext} from '../providers/SelectedDeliveryProvider';
 import BackgroundJob from 'react-native-background-job';
 import { collectData } from '../services';
 import {  } from '../services';

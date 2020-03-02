@@ -4,7 +4,6 @@ import { getDeliveries } from '../services';
 import { Delivery } from '../entities';
 import { ListItem } from '../components';
 
-//TODO: tipar navigation
 export function DeliveriesList ({navigation}) {
   const [deliveries, setDeliveries] = useState([])
 

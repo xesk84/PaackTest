@@ -9,9 +9,3 @@ import {
     android: TouchableNativeFeedback,
     ios: TouchableWithoutFeedback,
   })
-  
-
-//   export const Touchable = Platform.select<any>({
-//     android: TouchableNativeFeedback,
-//     ios: TouchableOpacity,
-//   })
